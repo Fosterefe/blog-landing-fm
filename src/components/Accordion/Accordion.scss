@@ -1,0 +1,129 @@
+.Accordion {
+    width: 75%;
+    margin: 0rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+
+    .m-info {
+        margin-top: 3rem;
+        padding: .7rem 1.1rem;
+        background: hsl(231, 69%, 60%);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .a-text {
+        width: 100%;
+        text-align: center;
+        height: 8rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: hsl(229, 8%, 60%);
+            font-size: .94rem;
+        }
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .acc {
+            width: 60%;
+
+            button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 4rem;
+                border: none;
+                text-align: start;
+                background-color: white;
+                border-bottom: 1px solid  hsl(229, 15%, 86%);
+                cursor: pointer;
+                padding: .5rem;
+                
+                &:first-child {
+                    border-top: 1px solid hsl(231, 16%, 85%);
+                }
+
+                h4 {
+                    font-weight: bold;
+                    color: hsl(229, 31%, 21%);
+                    font-size: .9rem;
+                    transition: all .15s ease;
+                    letter-spacing: .5px;
+                }
+
+                &:hover {  
+                    h4 {
+                        color: hsl(0, 94%, 66%);
+                    }
+                }
+
+            }  
+            .acc-content {
+                display: none; 
+            }
+        
+            .acc-content.active {
+                display: block ;
+                height: auto;
+                padding: 2rem .5rem;
+                color: hsl(229, 8%, 60%);
+                font-size: .95rem;
+
+            }
+
+            .arrow {
+                transition: all .5s ease;
+            }
+
+            .arrow.active {
+                font-size: 2rem;
+                transform: scale(2);
+                transform: rotate(180deg);
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .Accordion {
+
+        .a-text {
+            margin-bottom: 5rem;
+
+            h1 {
+                font-weight: 500;
+            }
+        }
+
+        .accordion {
+            .acc {
+                width: 100%;
+            }
+        }
+
+        .m-info {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,206 @@
+.Tabs {
+    width: 74%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .f {
+        margin-bottom: 4rem;
+        text-align: center;
+
+        h1 {
+            color: hsl(229, 31%, 21%);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: hsl(229, 8%, 60%);
+            text-align:unset;
+            max-width: 450px;
+            line-height: 25px;
+        }
+    }
+
+    .tab-changer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5rem;
+        width: 100%;
+        position: relative;
+
+        .tc-container {
+            width: 75%;
+            display: flex;
+            justify-content: space-around;
+            font-size: .95rem;
+            font-weight: 400;
+            color:  hsl(220, 3%, 41%);
+           /*  margin-bottom: 2.2rem; */
+
+            h3 {
+                font-weight: 400;
+                cursor: pointer;
+                padding-bottom: 2.2rem;
+                transition: all .1s ease-in-out;
+
+                &:hover {
+                    color: hsl(0, 94%, 66%);
+                    border-bottom: 3px solid  hsl(0, 94%, 66%);
+                }
+            }
+
+            .active {
+                color:  hsl(229, 31%, 21%);
+            }
+        }
+
+        .bar {
+            margin: 0;
+            width: 75%;
+            height: 1.5px;
+            background-color:  hsl(224, 8%, 73%);
+        }
+    }
+
+    .t-footer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        position: relative;
+
+        .tf-left {
+            width: 47%;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all .4s ease-in-out;
+            background-color: hsl(228, 8%, 88%);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            z-index: 5;
+
+            svg {
+                z-index: 5;
+            }       
+        }
+
+        .tf-bg {
+            width: 93%;
+            height: 90%;
+            position: absolute;
+            top: 25%;
+            left: -50%;
+            background-color: hsl(231, 69%, 60%);
+            z-index: -10;
+            border-bottom-right-radius: 8rem;
+        }     
+
+        .tf-right {
+            width: 50%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all .4s ease-in-out;
+            padding-left: 3rem;
+
+            h1 {
+                margin-bottom: 1.5rem;
+                text-align: start;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+                color:  hsl(229, 8%, 60%);
+                line-height: 23px;
+                font-size: .95rem;
+                text-align: left;
+            }
+
+            button {
+                align-self: flex-start;
+               
+                padding: 15px 25px;
+                color: white;
+                background-color: hsl(231, 69%, 60%);
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .Tabs {
+
+        .f {
+            p {
+                max-width: 100%;
+            }
+        }
+
+        .tab-changer {
+            .tc-container {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+
+                h3 {
+                    border-top: 1px solid hsl(229, 8%, 60%);
+                    padding-top: 1.5rem;
+                    font-size: 1.2rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            .bar {
+                width: 100%;
+                height: 1px;
+            }
+        }
+
+        .t-footer {
+            flex-direction: column;
+
+            .tf-left {
+                width: 120%;
+            } 
+
+            .tf-right {
+                width: 100%;
+                padding: 0;
+                align-items: center;
+                margin-top: 3.5rem;
+
+                h1 {
+                    text-align: center;
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    text-align: center;
+                    width: 124.5%;
+                    text-align: center;
+                }
+
+                button {
+                    display: none;
+                    align-self: center;
+                }
+            }
+            
+            .tf-bg {
+                top: 10%;
+                left: -10;
+                width: 150%;
+                height: 45%;
+            }
+
+
+        }
+    }
+}

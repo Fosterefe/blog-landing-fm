@@ -1,0 +1,175 @@
+.Nabvar {
+    width: 100%;
+
+    .nav {
+        display: flex;
+        width: 100%;
+        height: 15vh;
+        justify-content: space-around;
+        align-items: center;
+
+        .Logo {
+            width: 7.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.1rem;
+            }
+
+            svg {
+                color: rgba(81, 103, 222, 1);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 35%;
+
+            li {
+                width:  20%;
+                list-style: none;
+                text-align: center;
+                align-self: center;
+
+                a {
+                    font-weight: 500;
+                    font-size: .75rem;
+                    text-decoration: none;
+                    color: hsl(229, 31%, 21%);
+                    letter-spacing: 1px;
+                    transition: all .1s ease-in;
+
+                    &:hover {
+                        color: hsl(0, 94%, 66%);
+                    }
+                }
+            }
+
+            .login {
+                background-color: hsl(0, 94%, 66%);
+                border-radius: 5px;
+                padding: 8px 10px;
+                
+                a {
+                    color: white;
+                    width: 100%;
+                    height: 100%;
+                    transition: all .2s ease-in;
+                }
+
+                &:hover {
+                    background-color: white;
+                    border: 1.5px solid hsl(0, 94%, 66%);
+
+                    a {
+                        color: hsl(0, 94%, 66%);
+                    }
+                }
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+   .Nabvar {
+        position: relative;
+
+        .nav {
+            transition: all .5s ease-in-out;
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+                font-size: 1.2rem;
+            }
+        }
+
+        .nav.active {   
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            align-items: flex-start;
+            padding-top: 2.45rem;
+            background-color:  hsl(229, 31%, 21%, 0.85);
+            z-index: 1;
+
+            .Logo {
+                h3 {
+                    color: white;
+                }
+
+                svg {
+                    color: white;
+                }
+            }
+
+            .nav-links {
+                width: 100%;
+                display: block;
+                position: absolute;
+                top: 15%;
+
+                li {
+                    margin: 0rem auto;
+                    width: 80%;
+                    text-align: center;
+                    border-top: 1px solid  hsl(229, 8%, 60%);
+                    padding: 1.5rem 0rem;
+
+                    a {
+                        color: white;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        letter-spacing: 4px;
+                    }
+
+                }
+
+                .contact {
+                    border-bottom: 1px solid  hsl(229, 8%, 60%);
+                }
+
+                .login {
+                    background-color: transparent;
+                    border: 2px solid white;
+                    padding: 12px 8px;
+                    margin-top: 1.1rem;
+                }
+
+            }
+
+            .burger {
+                display: block;
+                font-size: 1.2rem;
+                color: white;
+            }
+
+            .socials {
+                width: 11.5rem;
+                position: absolute;
+                bottom: 4rem;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: space-around;
+
+                svg {
+                    font-size: 2.2rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}

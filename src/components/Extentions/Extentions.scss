@@ -1,0 +1,132 @@
+.extentions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0px auto;
+    padding: 6rem 0rem;
+
+    .ex-text {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        flex: 1;
+        height: 5rem;
+        margin-bottom: 5rem;
+    
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    
+        p {
+            font-size: .98rem;
+            color: hsl(229, 8%, 60%);
+        }
+    }
+    
+    .ex-cards {
+        display: flex;
+       /*  align-items: center; */
+        justify-content: space-evenly;
+        width: 100%;
+        height: 25rem;
+
+        .Card {
+            width: 15rem;
+            height: 20rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 10px;
+
+            .c-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 70%;
+
+                .c-text {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                    h4 {
+                        margin-bottom: .5rem;
+                    }
+
+                    p {
+                        color: hsl(229, 8%, 60%);
+                        font-size: .87rem;
+                    }
+                }
+            }
+
+            .c-btn {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top: 4px dotted hsl(223, 11%, 88%);
+
+                button {
+                    padding: .8rem 1.6rem;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: hsl(231, 69%, 60%);
+                    color: white;
+                    transition: all .1s ease-out;
+
+                    &:hover {
+                      background-color: white;
+                      color: hsl(231, 69%, 60%);
+                      outline: solid 2px hsl(231, 69%, 60%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .extentions {
+        width: 90%;
+        margin-top: -1rem;
+
+        .ex-text {
+            height: 25%;
+            margin-bottom: 4rem;
+            text-align: center;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .ex-cards {
+            height: 75%;
+            flex-direction: column;
+            align-items: center;
+
+            .Card {
+                margin-top: 0rem !important;
+                margin-bottom: 2.5rem;
+                width: 19rem;
+                height: 25rem;
+
+                .c-btn {
+                    button {
+                        padding: 1rem 2rem;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}

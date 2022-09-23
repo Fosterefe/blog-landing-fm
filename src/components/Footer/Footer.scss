@@ -1,0 +1,125 @@
+.Footer {
+    width: 100%;
+    background-color: hsl(229, 31%, 21%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+
+    nav {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        .f-logo {
+            width: 7.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.1rem;
+                color: white;
+            }
+
+            svg {
+                color: rgba(81, 103, 222, 1);
+                font-size: 1.1rem;
+            }
+        }
+
+        ul {
+            width: 30%;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+            li {
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            a {
+                color: white;
+                font-size: .8rem;
+                font-weight: 400;
+                text-decoration: none;
+
+                &:hover{ 
+                    color: hsl(0, 94%, 66%);
+                }
+            }
+        }
+
+        .f-social {
+            width: 12%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                font-size: 2rem;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    color: hsl(0, 94%, 66%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .Footer {
+        height: 20rem;
+        padding: 2rem 0rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        nav {
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+
+            .f-logo {
+                width: 8.5rem;
+                svg {
+                    font-size: 1.3rem;
+                }
+
+                h3 {
+                    font-size: 1.25rem;
+                }
+            }
+
+            ul {
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 55%;
+
+                li {
+                    justify-content: center;
+                    width: 100%;
+                    width: 100%;
+
+                    a {
+                        font-size: .95rem;
+                    }
+                }
+            }
+
+            .f-social {
+                width: 55%;
+            }
+        }
+    }   
+}

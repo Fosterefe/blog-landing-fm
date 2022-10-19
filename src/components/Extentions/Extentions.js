@@ -1,26 +1,43 @@
 import './Extentions.scss'
 import Card from './Card'
-import { Chrome, FireFox, Opera } from '../Icons/Icons'
+import cakerepo from '../../images/cakerepo.jfif'
+import manga from '../../images/manga.png'
+import topping from '../../images/topping.jpg'
 
 function Extentions() {
-  return (
-    <div className='extentions'>
-        <div className='ex-text'>
-            <h1>
-                Download the extention
-            </h1>
-            <p>
-                We've got more browsers in the pipleine. Please do let us know if <br/> you've got a favourite you'd like us to prioratize.
-            </p>
-        </div>
-        <div className='ex-cards'>
-            <Card icon={<Chrome />}  browser={'Chrome'}   version={'62'}  marginTop={0}/>
-            <Card icon={<FireFox />} browser={'FireFox'}  version={'55'}  marginTop={2}/>
-            <Card icon={<Opera />}   browser={'Opera'}    version={'46'}  marginTop={3.5}/>
-        </div>
+    return (
+        <div className='extentions' id='content'>
+            <div className='ex-text'>
+                <h1>
+                    Tabla de Contenido
+                </h1>
+                <p>
+                    Hecha un vistazo a nuestros produtos
+                </p>
+            </div>
+            <div className='ex-cards'>
+                <Card
+                    icon={cakerepo}
+                    browser={'Pasteles'}
+                    version={'62'}
+                    marginTop={0}
+                    url={'/cakes'}/>
+                <Card
+                    icon={manga}
+                    browser={'Rellenos'}
+                    version={'55'}
+                    marginTop={2}
+                    url={'/rellenos'}/>
+                <Card
+                    icon={topping}
+                    browser={'Toppings'}
+                    version={'46'}
+                    marginTop={3.5}
+                    url={'/toppings'}/>
+            </div>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Extentions

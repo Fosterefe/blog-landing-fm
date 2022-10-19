@@ -1,27 +1,24 @@
 import './Hero.scss'
-import { Heroo } from '../Icons/Icons'
+import cshop from '../../images/cshop.svg'
+import { NavLink } from 'react-router-dom'
 
 function Hero() {
+    
+
   return (
 <div className='Hero'>
     <div className='left'>
         <div className='h-text'>
-            <h1>A Simple Boorkmark
-                <br></br>
-                Manager</h1>
-            <p>A clean and simple interface to organize your favorite
-                <br/>
-                websites. Open a new browser tab and see your sites load
-                <br/>
-                instantly. Try it for free.</p>
+            <h1>CakeLab</h1>
+            <p>Making sweet memories</p>
         </div>
         <div className='h-btns'>
-            <button>Get it on Chrome</button>
-            <button>Get it on Firefox</button>
+            <a href='#email'>Contactanos</a>
+            <a href='#content'>Productos</a>
         </div>
     </div>
     <div className='right'>
-        <Heroo/>
+        <img src={cshop} className='hero-img'/>
         <div className='h-b'></div>
     </div>
 </div>

@@ -9,18 +9,26 @@
         align-items: center;
 
         .Logo {
-            width: 7.5rem;
+            width: 6.9rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            text-decoration: none;
+            color: black;
 
             h3 {
                 font-weight: 500;
                 font-size: 1.1rem;
             }
 
+            img {
+                width: 30px;
+                border-radius: 20px;
+
+            }
+
             svg {
-                color: rgba(81, 103, 222, 1);
+                color: rgba(253, 132, 121, 1);
             }
         }
 
@@ -78,7 +86,20 @@
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
+        .Nabvar {
+            nav {
+                .nav-links {
+                    li {
+                        margin-left: 50px;
+                    }
+                }
+            }
+        }
+
+}
+
+@media screen and (max-width: 430px) {
    .Nabvar {
         position: relative;
 
@@ -104,7 +125,8 @@
             padding-top: 2.45rem;
             background-color:  hsl(229, 31%, 21%, 0.85);
             z-index: 1;
-
+            overflow: hidden;
+            
             .Logo {
                 h3 {
                     color: white;
@@ -164,6 +186,10 @@
                 transform: translateX(-50%);
                 display: flex;
                 justify-content: space-around;
+
+                a {
+                    color: black;
+                }
 
                 svg {
                     font-size: 2.2rem;

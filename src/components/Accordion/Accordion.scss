@@ -10,7 +10,7 @@
     .m-info {
         margin-top: 3rem;
         padding: .7rem 1.1rem;
-        background: hsl(231, 69%, 60%);
+        background: rgba(253, 132, 121, 1);
         color: white;
         border: none;
         border-radius: 4px;
@@ -104,7 +104,7 @@
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
     .Accordion {
 
         .a-text {

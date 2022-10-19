@@ -1,5 +1,8 @@
 import './Tabs.scss'
 import { Tab1, Tab2, Tab3 } from '../Icons/Icons'
+import innovacion from '../../images/innovacion.jpg'
+import mision1 from '../../images/mision1.webp'
+import vision from '../../images/vision.jpg'
 import { useState } from 'react'
 
 function Tabs() {
@@ -15,17 +18,13 @@ function Tabs() {
             return (
                 <> 
                     <div className='tf-left'>
-                        <Tab1/>
+                        <img src={innovacion} className='tab-img'/>
                     </div>
                     <div className='tf-bg'></div>
                     <div className='tf-right'>
-                        <h1>Bookmark in one click</h1>
-                        <p>Organize your bookmarks however you like. Our
-                        <br/>
-                        siple drag-and-drop gives you complete
-                        <br/>
-                        control over how you manage you favourite sites.</p>
-                        <button>More Info</button>
+                        <h1>Nuestra innovación</h1>
+                        <p>Somos innovadores porque tomamos el servicio preexistente de pasteles para eventos y lo llevamos a nuevas alturas, desde la personalización hasta la decoración en vivo.​</p>
+                        
                     </div>
                 </>
             )
@@ -34,15 +33,13 @@ function Tabs() {
             return (
                 <>
                     <div className='tf-left'>
-                        <Tab2/>
+                        <img src={mision1} className='tab-img'/>
                     </div>
                     <div className='tf-bg'></div>
                     <div className='tf-right'>
-                        <h1>Intelligent search</h1>
-                        <p>Our powerful search feature will help you find saved <br/>
-                        sites in no time at all. No need to trawl through all of<br/>
-                        your bookmarks</p>
-                        <button>More Info</button>
+                        <h1>Nuestra Misión</h1>
+                        <p>Brindar a nuestros clientes una experiencia inolvidable para sus eventos.</p>
+                       
                     </div>
                 </>
             )
@@ -51,15 +48,13 @@ function Tabs() {
             return (
                 <>
                     <div className='tf-left'>
-                        <Tab3/>
+                        <img src={vision} className='tab-img'/>
                     </div>
                     <div className='tf-bg'></div>
                     <div className='tf-right'>
-                        <h1>Share your bookmarks</h1>
-                        <p>Easily share your bookmarks and collection with<br/>
-                        others.Create a shareable link that you can send at<br/>
-                        the click of a button.</p>
-                        <button>More Info</button>
+                        <h1>Nuestra Visión</h1>
+                        <p>A largo plazo ser reconocidos por nuestro profesionalismo y dinámicas innovadoras.</p>
+                        
                     </div>
                 </>
             )
@@ -67,20 +62,16 @@ function Tabs() {
     }
 
   return (
-<div className='Tabs'>
+<div className='Tabs' id='nosotros'>
     <div className='f'>
-        <h1>Features</h1>
-        <p>Our aim is to make it quick and easy for you to access your
-            <br/>
-            favourite websites. Your bookmarks sync between your devices
-            <b/>
-            so you can access them in the go.</p>
+        <h1>CakeLab</h1>
+        <p>Cake Lab es una compañía en donde vendemos pasteles personalizados para eventos, con decoración en vivo para que tu día especial sea inolvidable.</p>
     </div>
     <div className='tab-changer'>
         <div className='tc-container'>
-            <h3 onClick={(e) => clickHandler(e)} data-id={1} >Simple Bookmarking</h3>
-            <h3 onClick={(e) => clickHandler(e)} data-id={2} >Speedy searching</h3>
-            <h3 onClick={(e) => clickHandler(e)} data-id={3} >Easy Sharing</h3>
+            <h3 onClick={(e) => clickHandler(e)} data-id={1} >Innovadores</h3>
+            <h3 onClick={(e) => clickHandler(e)} data-id={2} >Misión</h3>
+            <h3 onClick={(e) => clickHandler(e)} data-id={3} >Visión</h3>
         </div>
         <div className='bar'></div>
     </div>

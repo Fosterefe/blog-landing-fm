@@ -1,24 +1,21 @@
-import './App.scss';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import Tabs from './components/Tabs/Tabs';
-import Extentions from './components/Extentions/Extentions';
-import Accordion from './components/Accordion/Accordion';
-import Email from './components/Email/Email';
-import Footer from './components/Footer/Footer';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom'
+import HomePage from './homePage';
+import Cakes from './components/Cakes/cakes'
+import Rellenos from './components/Rellenos/Rellenos'
+import Toppings from './components/Toppings/Toppings'
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Tabs />
-      <Extentions />
-      <Accordion />
-      <Email />
-      <Footer />
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/cakes' element={<Cakes/>}/>
+        <Route path='/rellenos' element={<Rellenos/>}/>
+        <Route path='/toppings' element={<Toppings/>}/>
+        <Route path='*' element={<Navigate to={'/'} />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;

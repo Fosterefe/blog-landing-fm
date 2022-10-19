@@ -29,10 +29,10 @@
     
     .ex-cards {
         display: flex;
-       /*  align-items: center; */
         justify-content: space-evenly;
         width: 100%;
         height: 25rem;
+        gap: 3%;
 
         .Card {
             width: 15rem;
@@ -49,6 +49,14 @@
                 align-items: center;
                 justify-content: space-around;
                 height: 70%;
+
+                .Icon {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 65%;
+                    }
+                }
 
                 .c-text {
                     display: flex;
@@ -74,19 +82,21 @@
                 align-items: center;
                 border-top: 4px dotted hsl(223, 11%, 88%);
 
-                button {
+                a {
                     padding: .8rem 1.6rem;
+                    text-decoration: none;
                     border-radius: 5px;
                     border: none;
                     cursor: pointer;
-                    background-color: hsl(231, 69%, 60%);
+                    background-color: rgba(253, 132, 121, 1);
                     color: white;
                     transition: all .1s ease-out;
+                    font-weight: 500;
 
                     &:hover {
                       background-color: white;
-                      color: hsl(231, 69%, 60%);
-                      outline: solid 2px hsl(231, 69%, 60%);
+                      color: rgba(253, 132, 121, 1);
+                      outline: solid 2px rgba(253, 132, 121, 1);
                     }
                 }
             }
@@ -94,7 +104,22 @@
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
+    .extentions {
+        width: 90%;
+        .ex-cards {
+            gap: 3%;
+
+            .Card {
+                width: 20rem;
+                max-height: 18rem;
+                min-height: 5%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
     .extentions {
         width: 90%;
         margin-top: -1rem;

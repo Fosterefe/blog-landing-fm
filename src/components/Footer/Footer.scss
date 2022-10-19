@@ -13,7 +13,7 @@
         align-items: center;
         height: 100%;
         .f-logo {
-            width: 7.5rem;
+            width: 6rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -25,7 +25,7 @@
             }
 
             svg {
-                color: rgba(81, 103, 222, 1);
+                color: rgba(253, 132, 121, 1);
                 font-size: 1.1rem;
             }
         }
@@ -58,7 +58,7 @@
         .f-social {
             width: 12%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
 
             svg {
@@ -74,7 +74,19 @@
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
+    .Footer {
+        nav {
+            width: 80%;
+
+            ul {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
     .Footer {
         height: 20rem;
         padding: 2rem 0rem;
@@ -89,7 +101,8 @@
             width: 50%;
 
             .f-logo {
-                width: 8.5rem;
+                width: 55%;
+                gap: 10px;
                 svg {
                     font-size: 1.3rem;
                 }

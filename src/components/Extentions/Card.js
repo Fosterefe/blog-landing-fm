@@ -1,19 +1,19 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-function Card({ icon, browser, version, marginTop }) {
+function Card({ icon, browser, version, marginTop, url }) {
   return (
 <div className='Card' style={{ marginTop: `${marginTop}rem` }}>
     <div className='c-content'>
         <div className='Icon'>
-            {icon}
+            <img src={icon}  />
         </div>
         <div className='c-text'>
-            <h4>Add to {browser}</h4>
-            <p>Minimum version {version}</p>
+            <h4>{browser}</h4>
         </div>
     </div>
     <div className='c-btn'>
-      <button>Add & Install Extention</button>
+      <NavLink to={url}>Ver</NavLink>
     </div>
 </div>
   )

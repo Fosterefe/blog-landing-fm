@@ -1,46 +1,66 @@
 import './Navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faBars } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
+import cakelabicon from '../../images/cakelabicon.png'
 
-function Navbar() {
+function Navbar({change}) {
 
     const [open, setOpen] = useState(false)
 
-    const click = () => {
+    const click = (e) => {
         setOpen((value) => value ? false : true)
+
+        console.log(e.target)
+
     }
+
+    const close = () => {
+        setOpen(false)
+    }
+
 
     return (
 <div className='Nabvar'>
     <nav className={open ? 'nav active' : 'nav'}>
-        <div className='Logo'>
-            <FontAwesomeIcon icon={faBookmark}/>
-            <h3>BOOKMARK</h3>
-        </div>
+        <Link to={'/'} className='Logo'>
+            <img src={cakelabicon} alt='logo-img' className='logo-icon'/>
+            <h3>CakeLab</h3>
+        </Link>
         <ul className='nav-links'>
-            <li>
-                <a href='#'>FEATURES</a>
-            </li>
-            <li>
-                <a href='#'>PRICING</a>
-            </li>
-            <li className='contact'>
-                <a href='#'>CONTACT</a>
-            </li>
-            <li className='login'>
-                <a href='#'>LOGIN</a>
-            </li>
+            {
+                change ?
+                <><li onClick={e => close()}>
+                <a href='/cakes'>PASTELLES</a>
+                </li>
+                <li onClick={e => close()}>
+                <a href='/rellenos'>RELLENOS</a>
+                </li>
+                <li className='contact' onClick={e => close()}>
+                <a href='/toppings'>TOPPINGS</a>
+                </li></>
+                :
+                <>
+                <li onClick={e => close()}>
+                <a href='#nosotros'>NOSOTROS</a>
+                </li>
+                 <li onClick={e => close()}>
+                <a href='#content'>CONTENIDO</a>
+                </li>
+                <li className='contact' onClick={e => close()}>
+                <a href='#email'>CONTACTO</a>
+                </li></>
+            }
         </ul>
-        <div className='burger' onClick={click}>
+        <div className='burger' onClick={e => click(e)}>
             <FontAwesomeIcon icon={faBars}/>
         </div>
         {
         open && (
             <div className='socials'>
-                <FontAwesomeIcon  icon={faFacebook}/>
-                <FontAwesomeIcon icon={faTwitter} />
+                <a href='https://www.instagram.com/cakelab_sv/'><FontAwesomeIcon icon={faInstagram} /></a>
             </div>
         )
         }
@@ -48,6 +68,6 @@ function Navbar() {
 </div>
     )
 }
-
-
+/*<FontAwesomeIcon icon={faBookmark} className='logo-svg'/> */
+/*<FontAwesomeIcon  icon={faFacebook}/>*/
 export default Navbar

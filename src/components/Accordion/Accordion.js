@@ -1,6 +1,6 @@
-import { useRef } from 'react'
+import {useRef} from 'react'
 import './Accordion.scss'
-import	{ Arrow } from '../Icons/Icons'
+import {Arrow} from '../Icons/Icons'
 
 const Accordion = () => {
 
@@ -9,92 +9,86 @@ const Accordion = () => {
     const arrow = useRef(null)
 
     const openAcc = (index) => {
-        let acc = el.current.querySelectorAll('.acc')
+        let acc = el
+            .current
+            .querySelectorAll('.acc')
         let elem = acc[index]
         let content = elem.querySelector('.acc-content')
-        let arw = elem.querySelector('.arrow') 
-        arw.classList.toggle('active')
-        content.classList.toggle('active')
+        let arw = elem.querySelector('.arrow')
+        arw
+            .classList
+            .toggle('active')
+        content
+            .classList
+            .toggle('active')
         //arrow.current.classList.toggle('active')
     }
 
-  return (
-<div className='Accordion'>
-    <div className='a-text'>
-        <h1>Frequently Asked Question</h1>
-        <p>Here are some of our FAQs. If you have any other questions
-            <br/>
-            you'd like answered please feel free to email us.</p>
-    </div>
-    <div ref={el} className='accordion'>
-        <div className='acc'>
-            <button onClick={() => openAcc(0)}>
-                <h4>What is BookMark?</h4>
-                <Arrow ref={arrow}/>
-            </button>
-            <div ref={elem} className='acc-content'>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum  11111.
-                </p>
+    return (
+        <div className='Accordion'>
+            <div className='a-text'>
+                <h1>Preguntas Frecuentes</h1>
+                <p>Aqui hay algunas de las preguntas mas frecuentes. Si tiene otras preguntas que quiera preguntar
+                    <br/>
+                    por favor escribanos a nuestro correo.</p>
             </div>
-        </div>
-        <div className='acc'>
-            <button onClick={() => openAcc(1)}>
-                <h4>How can I request a new browser?</h4>
-                <Arrow ref={arrow} />
-            </button>
-            <div ref={elem} className='acc-content'>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum 22222.
-                </p>
+            <div ref={el} className='accordion'>
+                <div className='acc'>
+                    <button onClick={() => openAcc(0)}>
+                        <h4>Donde hacemos los eventos?</h4>
+                        <Arrow ref={arrow}/>
+                    </button>
+                    <div ref={elem} className='acc-content'>
+                        <p>
+                            Por ahora los hacemos en San Salvador y La Libertad, pero nos expandiremos
+                            pronto.
+                        </p>
+                    </div>
+                </div>
+                <div className='acc'>
+                    <button onClick={() => openAcc(1)}>
+                        <h4>Como se hacen pedidos en linea?</h4>
+                        <Arrow ref={arrow}/>
+                    </button>
+                    <div ref={elem} className='acc-content'>
+                        <p>
+                            Los pedidos en linea se hacen desde la sección de contacto, en la cual tiene
+                            que detallar el evento que quiere organizar o pedido junto con su direccion de correo 
+                            electronico, despues de llenar los campos recivirá en su email un forms donde podra
+                            confirmar y detallar su evento o pedido.
+                        </p>
+                    </div>
+                </div>
+                <div className='acc'>
+                    <button onClick={() => openAcc(2)}>
+                        <h4>Cual es el metodo de pago?</h4>
+                        <Arrow ref={arrow}/>
+                    </button>
+                    <div ref={elem} className='acc-content'>
+                        <p>
+                            El metodo de pago solo se puede llevar a cabo en linea, mediante depositos 
+                            bancarios.
+                        </p>
+                    </div>
+                </div>
+                <div className='acc'>
+                    <button onClick={() => openAcc(3)}>
+                        <h4>Que tipo de eventos organiza CakeLab?</h4>
+                        <Arrow ref={arrow}/>
+                    </button>
+                    <div ref={elem} className='acc-content'>
+                        <p>
+                            Nuestra compañia provee servicios para organizar bodas, eventos empresariales,
+                            babyshowers, fiestas de 15 años y fiestas de cumpleaños.
+                        </p>
+                    </div>
+                </div>
             </div>
+
         </div>
-        <div className='acc'>
-            <button onClick={() => openAcc(2)}>
-                <h4>Is there a mobile app?</h4>
-                <Arrow ref={arrow}/>
-            </button>
-            <div ref={elem} className='acc-content'>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum 33333.
-                </p>
-            </div>
-        </div>
-        <div className='acc'>
-            <button onClick={() => openAcc(3)}>
-                <h4>What about other Chronium browsers?</h4>
-                <Arrow ref={arrow} />
-            </button>
-            <div ref={elem} className='acc-content'>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum  44444.
-                </p>
-            </div>
-        </div>
-    </div>
-    <button className='m-info'>More Info</button>
-</div>
-  )
+    )
 }
+
+/*<button className='m-info'>More Info</button>*/
 
 export default Accordion

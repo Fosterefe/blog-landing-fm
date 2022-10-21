@@ -4,7 +4,6 @@ import React from 'react'
 import {useState} from 'react';
 import {useEffect} from 'react';
 import {useRef} from 'react';
-import {formatMuiErrorMessage} from '@mui/utils';
 
 function Email() {
     const [error, setError] = useState(false)
@@ -17,7 +16,7 @@ function Email() {
     const form = useRef(null)
     const btn = useRef(null)
 
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    //var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     const handleInput = (e) => {
         e.preventDefault();
